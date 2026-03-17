@@ -40,7 +40,7 @@ let euler () =
         if ratGt t eps then
             let new_s = ratAdd s t in
             let new_t = ratDiv t c in
-            let new_c = ratAdd c 1 in
+            let new_c = ratAdd c (rat 1 1) in
             calc new_c new_s new_t
         else
             s
