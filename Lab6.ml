@@ -7,9 +7,6 @@ let rec c n k =
   else if n = 0 then 0
   else c (n - 1) k + c (n - 1) (k - 1) ;;
 
-(* Memoized version.  The hash table is created exactly once, when memyC is
-   first defined, and is captured in the closure.  It is invisible to any
-   code outside this definition. *)
 let memyC =
   let table = Hashtbl.create ~random:false 1000 in
   let rec memyC' n k =
