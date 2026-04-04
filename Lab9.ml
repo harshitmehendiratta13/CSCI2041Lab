@@ -1,3 +1,10 @@
+type
+  thing =
+    Cons of thing * thing |
+    Nil |
+    Number of int |
+    Symbol of string ;;
+
 (* Returns true if predicate holds for every element in the list.
    Empty list returns true since nothing can fail. *)
 let rec every predicate elements =
